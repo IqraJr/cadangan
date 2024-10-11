@@ -1,0 +1,65 @@
+/* app.css */
+
+/* Warna latar belakang bagian atas (navbar) */
+.bg-dark {
+    background-color: #254336; /* Warna gelap */
+}
+
+/* Warna latar belakang bagian utama */
+.bg-primary {
+    background-color: #6B8A7A; /* Warna utama seperti yang terlihat pada gambar */
+    min-height: 40.6vh;
+}
+
+.bg-primary2 {
+    background-color: #6B8A7A; /* Warna utama seperti yang terlihat pada gambar */
+    min-height: 55vh;
+}
+
+/* Tombol dengan tampilan modern */
+.btn-secondary {
+    background-color: #254336; /* Warna sama dengan bagian atas */
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+/* Styling untuk teks di bagian konten utama */
+.text-dark {
+    color: #ffffff; /* Warna teks seperti yang terlihat pada gambar */
+}
+
+/* Utility classes untuk margin dan padding */
+.py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.py-24 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .text-5xl {
+        font-size: 2.5rem;
+    }
+
+    .text-4xl {
+        font-size: 2rem;
+    }
+
+    .btn-secondary {
+        padding: 0.5rem 1.25rem;
+    }
+}
+
+.bg-white {
+    color: #6B8A7A;
+}
+
+
