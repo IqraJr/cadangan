@@ -222,69 +222,69 @@ $ docker run -d -p 8081:80 dockerkel4
 ```bash
 http://localhost:8081/
 ```
-![gambar](https://drive.google.com/uc?id=1AeQKG7MURywxa3tqjuNLRjQWqRtbFaBQ)
+![gambar](https://drive.google.com/uc?id=1gn3LnyMsoSGSI_KUx10XlrepYgtD15Am)
 
 ### MENGHENTIKAN PROSES DOCKER
 ```bash
 $ docker stop dockerkel4
 ```
 
-## 2.MELAKUKAN PEMBATASAN CPU DAN MEMORY DALAM CONTAINER 
+## 2.MELAKUKAN PEMBATASAN MEMORY DAN CPU DALAM CONTAINER 
 ### PEMBATASAN MEMORY
 ```bash
-$ docker update --memory 2g --memory-swap 3g dockerkel4
+$ docker update --memory 2g --memory-swap 3g dockerkel4        
 ```
 #### SEBELUM PEMBATASAN MEMORY
-![gambar](https://drive.google.com/file/d/17jgYE8pJZlQWx8WVOll7dyK4WDWTkRr0/view?usp=drive_open)
+![gambar](https://drive.google.com/uc?id=17jgYE8pJZlQWx8WVOll7dyK4WDWTkRr0)
 
 #### SESUDAH PEMBATASAN MEMORY
-![gambar](https://drive.google.com/uc?id=1AeQKG7MURywxa3tqjuNLRjQWqRtbFaBQ)
+![gambar](https://drive.google.com/uc?id=1ESeDY8zEFYwElcyjw3bwDpZ6j5Hh4yUA)
 
 ### PEMBATASAN CPU
 ```bash
 $ docker update --cpus=2 dockerkel4
 ```
 #### SEBELUM PEMBATASAN CPU
-![gambar](https://drive.google.com/uc?id=1AeQKG7MURywxa3tqjuNLRjQWqRtbFaBQ)
+![gambar](https://drive.google.com/uc?id=1gd42bpttiiy3pdv2UYdSi0GE15G5fKBp)
 
 #### SESUDAH PEMBATASAN CPU
-![gambar](https://drive.google.com/uc?id=1AeQKG7MURywxa3tqjuNLRjQWqRtbFaBQ)
+![gambar](https://drive.google.com/uc?id=1y6B9xzKfl1rvAyxy8eXpF-rSimVntwA5)
 
 ## 3. MELAKUKAN FASE BEDAH CONTAINER
 ### masuk ke dalam container 
-sebelum kita melakukan bedah container terlebih dahulu kita akan masuk ke dalam containernya terlebih dahulu dengan command
+Sebelum kita melakukan bedah container terlebih dahulu kita akan masuk ke dalam containernya terlebih dahulu dengan command
 ```bash
 $ docker exec -it dockerkel4 /bin/bash
 ```
-![gambar](https://drive.google.com/uc?id=19aTENEJrl2pAvbCH9pQydn91dzBdtkZ3)
+![gambar](https://drive.google.com/uc?id=1vbtMBlgGm5BsLq14TlYeNJhSk5fUpIeO)
 
 Setelah masuk ke dalam container kita akan mencoaba beberapa command dibawah ini
 ### 1. Command ls -la /
 Menampilkan semua file dan folder di root direktori dengan detail.
 
-![gambar](https://drive.google.com/uc?id=1nj9sz-coF_N7rZnyyFf3CE_QpskvoRdP)
+![gambar](https://drive.google.com/uc?id=1oHQoQ_KUzx2B46dNDMcoP6ckMnBbvewC)
 
 ### 2. Command cat /etc/os-release
 Menampilkan Informasi OS (contoh: Ubuntu, Debian, dll.)..
 
-![gambar](https://drive.google.com/uc?id=1nj9sz-coF_N7rZnyyFf3CE_QpskvoRdP)
+![gambar](https://drive.google.com/uc?id=1zEMefVZICUHOjqaq2xBYLqRzNOIaIcrG)
 
 ### 3. Command df -h
 Menampilkan penggunaan disk dalam format yang mudah dibaca.
 
-![gambar](https://drive.google.com/uc?id=1nj9sz-coF_N7rZnyyFf3CE_QpskvoRdP)
+![gambar](https://drive.google.com/uc?id=1qM46gXH0Y42u_QL4xmdDkNUxpFkjpjbu)
 
 ### 4. Command ps aux
 Menampilkan daftar proses yang berjalan di container.
 
-![gambar](https://drive.google.com/uc?id=1nj9sz-coF_N7rZnyyFf3CE_QpskvoRdP)
+![gambar](https://drive.google.com/uc?id=1POp2lU2nLdEYu18qMjLauXTddLeCea--)
 
 ### 5. Command top
 Menampilkan tampilan real-time proses aktif.
 
-![gambar](https://drive.google.com/uc?id=1nj9sz-coF_N7rZnyyFf3CE_QpskvoRdP)
+![gambar](https://drive.google.com/uc?id=1SPEtu5bUEpULJPNNf9I_EQjw7UOe6lJp)
 
 ## KELUAR DARI CONTAINER 
 ```bash
-$ exit
+# exit
 ```
