@@ -1,47 +1,49 @@
-LANGKAH-LANGKAH MENJALANKAN DOCKER DI LINUX
+# LANGKAH-LANGKAH MENJALANKAN DOCKER DI LINUX
 
-# BUAT FOLDER DOCKER:
+## MEMBUAT FOLDER DOCKER DENGAN MENGGUNAKAN COMMAND WSL
 ```bash
-$ mkdir os
+$ mkdir docker4
 ```
-# BERPINDAH KE FOLDER:
+## PINDAH KE FOLDER docker4 
 ```bash
-$ cd os
+$ cd docker4
 ```
-# BUAT DOCKERFILE
+## MEMBUAT FILE DOCKERFILE
 ```bash
 $ touch Dockerfile
 ```
-# MENGEDIT ISI DOCKERFILe
+## MELAKUKAN INPUT KEDALAM FILE DOCKERFILE
 ```bash
 $ nano Dockerfile
 ```
-# ISI DOCKERFILE
+## MELAKUKAN INOUT PADA FILE Dockerfile
 ```bash
-# Menggunakan image Nginx resmi dari Docker Hub
-FROM nginx:latest
+# Gunakan image PHP resmi
+FROM php:8.1-apache
 
-# Menyalin file HTML ke dalam direktori default Nginx
-COPY ./html /usr/share/nginx/html/
+# Install dependencies (misalnya, jika menggunakan ekstensi tertentu)
+RUN docker-php-ext-install mysqli pdo pdo_mysql
 
-# Mengekspos port 80 agar bisa diakses dari luar
-EXPOSE 80AINER:
-![gambardocker] (https://drive.google.com/uc?id=1vbabcrSyPvQW466Syh6eB7VMdATivKiA)
+# Salin file PHP Anda ke dalam kontainer
+COPY . /var/www/html/
+
+# Expose port 80
+EXPOSE 80
 ```
-# BUAT FOLDER TEMPAT HTML
+## MEMBUAT FILE index.php 
 ```bash
-$ mkdir html
+$ touch index.php
 ```
-# BUAT FILE INDEX DI DALAM FOLDER HTML:
+## MELAKUKAN INPUT PADA FILE index.php
 ```bash
-$ touch html/index.html
+$ nano index.php
 ```
-# MENGEDIT ISI FILE INDEX YANG ADA DI DIDALAM FOLDER HTML:
+## MENGEDIT ISI FILE INDEX YANG ADA DI DIDALAM FOLDER HTML:
 ```bash
 $ nano html/index.html
 ```
 
-# ISI FILE index.html:
+## ISI FILE index.html:
 ```bash
 <!DOCTYPE html>
 <html lang="id">
@@ -62,34 +64,34 @@ $ nano html/index.html
 $ docker build -t os-app .
 ```
 
-# MENJALANKAN KONTAINER:
+## MENJALANKAN KONTAINER:
 ```bash
 $ docker run -d -p 8080:80 os-app
 ```
 
-# AKSES APLIKASI DI BROWSER
+## AKSES APLIKASI DI BROWSER
 http://localhost:8080
 
-# MENAMPILKAN CARA RUNNING CONTAINER, STATUS DOCKER TELAH BERJALAN, DAN STOP CONT
+## MENAMPILKAN CARA RUNNING CONTAINER, STATUS DOCKER TELAH BERJALAN, DAN STOP CONT
 ![gambardocker](https://drive.google.com/uc?id=1vbabcrSyPvQW466Syh6eB7VMdATivKiA)
 
-# MENAMPILKAN BUKTI DOCKER BERJALAN
+## MENAMPILKAN BUKTI DOCKER BERJALAN
 ![gambardocker](https://drive.google.com/uc?id=1S5MrX86l2euIf7Cs77enylsV2X1nWZSB)
 
 
-# MENGHENTIKAN KONTAINER YANG BERJALAN
+## MENGHENTIKAN KONTAINER YANG BERJALAN
 ```bash
 $ docker stop 6938e7e61034bd80069b71464194739e5300c22ba19af2576d923bedd5cb2aa5
 ```
 <<<<<<< HEAD
-# MELAKUKAN PEMBATASAN MEMORI
+## MELAKUKAN PEMBATASAN MEMORI
 ```bash
 $ docker run -d -p 8080:80--memory=512m --memory-swap=1g id-image
 ```
-# BUKTI STATUS PEMBATASAN MEMORI
+## BUKTI STATUS PEMBATASAN MEMORI
 ![gambar](https://drive.google.com/uc?id=1AeQKG7MURywxa3tqjuNLRjQWqRtbFaBQ)
 
-# MELAKUKAN FASE BEDAH CONTAINER
+## MELAKUKAN FASE BEDAH CONTAINER
 ## 1. Command ps aux
 Menampilkan semua proses yang sedang berjalan di dalam container. Ini berguna untuk menganalisis aplikasi atau proses yang sedang dijalankan dalam container.
 ```bash
